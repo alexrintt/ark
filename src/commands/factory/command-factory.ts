@@ -13,8 +13,10 @@ export class CommandFactory {
   createCommand(message: Message, guildConfig?: GuildConfig): Command | null {
     const [keyword, args] = this.parseCommand(
       message.content,
-      guildConfig?.prefix ?? 'ma!'
+      guildConfig?.prefix ?? 'ark!'
     );
+
+    console.log(message);
 
     switch (keyword) {
       case CommandType.say:
