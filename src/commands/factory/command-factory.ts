@@ -16,8 +16,6 @@ export class CommandFactory {
       guildConfig?.prefix ?? 'ark!'
     );
 
-    console.log(message);
-
     switch (keyword) {
       case CommandType.say:
         return new SayCommand(message, args);
